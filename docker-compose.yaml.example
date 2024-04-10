@@ -3,7 +3,9 @@ services:
   node-gulp:
     container_name: node-gulp
     restart: always
-    build: .
+    build: 
+      context: .
+      dockerfile: ./DOCKER-GULP-SASS-VUE-BROWSER_SYNC-/Dockerfile
     ports:
       - '80:3000'
     volumes:
