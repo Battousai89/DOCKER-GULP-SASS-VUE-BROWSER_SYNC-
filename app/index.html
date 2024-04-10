@@ -1,0 +1,48 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<link rel="stylesheet" href="./src/css/style.css">
+		<script>
+			var require = {
+				baseUrl: '/',
+				paths: {
+					'vue': '//unpkg.com/vue@3.0.11/dist/vue.global'
+				},
+				shim: {
+					'vue': {
+						'exports': 'Vue'
+					}
+				}
+			};
+
+			loadCss = function(config) {
+				var head = document.getElementsByTagName('head')[0];
+			
+				if (config.content) {
+					var style  = document.createElement('style');
+					style.type = 'text/css';
+					
+					if (style.styleSheet)
+						style.styleSheet.cssText = config.content;
+					else
+						style.innerHTML = config.content;
+			
+					head.appendChild(style);
+				} else if (config.url) {
+					var link  = document.createElement('link');
+					link.href = config.url;
+					link.rel  = 'stylesheet';
+					link.type = 'text/css';
+					head.appendChild(link);
+				}
+			};
+		</script>
+		<script data-main="./src/js/app" src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			{{ message }}
+        	<hello>Vue Component</hello>
+		</div>
+	</body>
+</html>

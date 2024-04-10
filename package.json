@@ -1,0 +1,26 @@
+{
+  "name": "k4site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@babel/core": "^7.24.4",
+    "@babel/plugin-transform-modules-amd": "^7.24.1",
+    "browser-sync": "^3.0.2",
+    "gulp": "^5.0.0",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-copy": "^4.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "",
+    "gulp-uglify": "^3.0.2",
+    "gulp-vue": "^0.1.0",
+    "gulp-vue-single-file-component": "^1.2.10",
+    "sass": "^1.74.1"
+  }
+}
